@@ -1,0 +1,20 @@
+.hero{
+background-color: var(--green);
+color: white;
+padding: 30px 0px;
+}
+.hero__container__image{
+max-width: 370px;
+margin-left: auto;
+display: block;
+}
+
+@media (width >= 800px) {
+.hero__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hero__container__description{
+    max-width:280px;
+}
+}

@@ -1,0 +1,6 @@
+.about__img{
+border-radius: 16px;
+}
+.about__img:last-child{
+margin-top: 150px;
+}

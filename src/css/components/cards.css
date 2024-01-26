@@ -1,0 +1,21 @@
+/*Product card*/
+.product-card{
+background-color: var(--light-gray);
+border-top-right-radius: 16px;
+border-top-left-radius: 16px;
+}
+.product-card__img{
+width: 100%;
+height: 185px;
+object-fit: cover;
+border-radius: inherit;
+}
+.product-card__body{
+padding: 25px;
+}
+
+/*Testimonial card*/
+.testimonial-card{
+padding: 30px 25px;
+border-radius: 16px;
+}

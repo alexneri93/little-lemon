@@ -1,0 +1,47 @@
+/*HEADER*/
+.header .list a{
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .header__nav{
+    position: fixed;
+    right: 0;
+    background: white;
+    padding: 100px 30px 45px 60px;
+    text-align: right;
+    bottom: 0;
+    top: 0;
+    transform: translateX(210px);
+    transition: .3s;
+  }
+  #header__togglemenu:checked ~ .header__nav{
+    transform: translateX(0px);
+    box-shadow: 200px 200px 200px 900px rgba(0, 0, 0, 0.6);
+  }
+  #header__togglemenu:checked ~ .header__closemenu{
+    display: block;
+    position: fixed;
+    right: 30px;
+    z-index: 1;
+  }
+  #header__togglemenu:checked ~ .header__openmenu{
+    display: block;
+  }
+  .header__nav .list{
+    flex-direction: column;
+  }
+
+  @media (width >= 800px) {
+    .header__closemenu{
+      display: none !important;
+    }
+    .header__nav{
+      box-shadow: none !important;
+      position: static;
+      padding: 0;
+      transform: none;
+    }
+    .header__nav .list{
+      flex-direction: row;
+    }
+  }

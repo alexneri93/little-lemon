@@ -1,0 +1,66 @@
+.type-markazi{
+font-family: 'Markazi Text', serif;
+}
+.type-karla{
+font-family: 'Karla', sans-serif;
+}
+
+.text-gray{
+color: var(--dark-gray);
+}
+.text-yellow{
+color: var(--yellow);
+}
+.text-white{
+color: var(--white);
+}
+.text-orange{
+color: var(--orange);
+}
+.text-green{
+color: var(--green);
+}
+
+.fs-1{
+font-size: 14px;
+}
+.fs-2{
+font-size: 16px;
+}
+.fs-3{
+font-size: 18px;
+}
+.fs-4{
+font-size: 20px;
+}
+.fs-5{
+font-size: 40px;
+}
+.fs-6{
+font-size: 64px;
+}
+
+.text-uppercase{
+text-transform: uppercase;
+}
+
+.fw-regular{
+font-weight: 400;
+}
+.fw-medium{
+font-weight: 500;
+}
+.fw-bold{
+font-weight: 700;
+}
+.fw-extrabold{
+font-weight: 800;
+}
+
+.lh-3{
+line-height: 25px;
+}
+
+.text-center{
+text-align: center;
+}

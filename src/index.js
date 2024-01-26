@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './css/index.css';
+import './css/utils/variables.css';
+import './css/utils/position.css';
+import './css/utils/spacing.css';
+import './css/utils/colors.css';
+import './css/utils/text.css';
+import './css/utils/visibility.css';
+import './css/components/button.css';
+import './css/components/cards.css';
+import './css/components/image.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
