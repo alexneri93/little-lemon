@@ -1,4 +1,4 @@
-function Booking() {
+function BookingPage() {
     return(
         <main>
             Booking page
@@ -6,4 +6,4 @@ function Booking() {
     )
 }
 
-export default Booking;
+export default BookingPage;

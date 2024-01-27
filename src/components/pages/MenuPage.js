@@ -1,4 +1,4 @@
-function Menu() {
+function MenuPage() {
     return(
         <main>
             <div className="container mt-5 mb-5">
@@ -8,4 +8,4 @@ function Menu() {
     )
 }
 
-export default Menu;
+export default MenuPage;

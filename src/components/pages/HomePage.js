@@ -3,7 +3,7 @@ import Specials from "../organisms/Specials"
 import CustomersSay from "../organisms/CustomersSay"
 import Chicago from "../organisms/Chicago"
 
-function Home() {
+function HomePage() {
     return(
         <main>
             <CallToAction/>
@@ -14,4 +14,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default HomePage;

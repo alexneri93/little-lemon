@@ -1,4 +1,4 @@
-function OrderOnline() {
+function OrderOnlinePage() {
     return(
         <main>
             <div className="container mt-5 mb-5">
@@ -8,4 +8,4 @@ function OrderOnline() {
     )
 }
 
-export default OrderOnline;
+export default OrderOnlinePage;
