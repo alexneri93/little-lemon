@@ -16,7 +16,7 @@ function CustomersSay(){
                     {
                         customers.map(customer => {
                             return(
-                                <div className='testimonial-card bg-white'>
+                                <div key={customer.id} className='testimonial-card bg-white'>
                                     <div className="mb-2 fw-bold fs-3"><img src={star} width="12px" height="12px" className='mr-1' alt="star"/>{customer.rating}</div>
                                     <div className='d-flex align-items-center mb-2'>
                                         <img src={require(`../../assets/${customer.image}`)} alt={customer.name} width="45" height="45" className="rounded object-fit-cover mr-2"/>

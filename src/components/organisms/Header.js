@@ -9,11 +9,11 @@ function Header () {
     <header className="header mt-4 mb-4">
         <div className="container d-flex align-items-center justify-space-between">
             <img src={logo} alt="Little Lemon"/>
-            <label for="header__togglemenu"  className='header__openmenu'>
+            <label htmlFor="header__togglemenu"  className='header__openmenu'>
                 <img src={hamburguerMenu} alt="menu" className='d-lg-none' width="35" height="25"/>
             </label>
             <input type='checkbox' id="header__togglemenu" className='d-none'/>
-            <label for="header__togglemenu" className='header__closemenu d-none'>
+            <label htmlFor="header__togglemenu" className='header__closemenu d-none'>
                 <img src={cross} alt="close menu" width="25" height="25"/>
             </label>
             <Nav listClass="gap-big" className="header__nav"/>

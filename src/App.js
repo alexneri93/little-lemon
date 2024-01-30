@@ -5,6 +5,7 @@ import MenuPage from './components/pages/MenuPage'
 import {BookingPage} from './components/pages/BookingPage'
 import OrderOnlinePage from './components/pages/OrderOnlinePage'
 import LoginPage from './components/pages/LoginPage'
+import ConfirmedBooking from './components/pages/ConfirmedBooking'
 import Footer from './components/organisms/Footer'
 import Main from './components/organisms/Main'
 import {Routes, Route} from 'react-router-dom'
@@ -21,6 +22,7 @@ function App() {
           <Route path='/booking' element={<BookingPage/>}/>
           <Route path='/order-online' element={<OrderOnlinePage/>}/>
           <Route path='/login' element={<LoginPage/>}/>
+          <Route path='/confirmed-booking' element={<ConfirmedBooking/>}/>
         </Routes>
       </Main>
       <Footer/>
