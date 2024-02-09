@@ -1,9 +1,14 @@
 import { useState } from "react";
 
 function BookingForm({availableTimes, dispatchTimes, submitForm}) {
+    const todayDate = new Date();
+    const year = todayDate.toLocaleString("default", { year: "numeric" });
+    const month = todayDate.toLocaleString("default", { month: "2-digit" });
+    const day = todayDate.toLocaleString("default", { day: "2-digit" });
+
     const [date, setDate] = useState("")
     const [time, setTime] = useState()
-    const [guests, setGuests] = useState(1)
+    const [guests, setGuests] = useState()
     const [occasion, setOccasion] = useState()
 
     const handleDateChange = (e) => {
@@ -27,21 +32,23 @@ function BookingForm({availableTimes, dispatchTimes, submitForm}) {
     return (
         <>
         <h2>Book Now</h2>
-        <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit}>
+        <form style={{display: "grid", maxWidth: "200px", gap: "20px"}} onSubmit={handleSubmit} name="reserve">
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" onChange={handleDateChange}/>
+            <input type="date" id="res-date" min={`${year}-${month}-${day}`} required aria-required="true" onChange={handleDateChange}/>
             <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" onChange={handleTimeChange}>
+            <select id="res-time" required aria-required="true" onChange={handleTimeChange}>
+                <option value="">Choose time</option>
                 {availableTimes.map(availableTime => <option key={availableTime}>{availableTime}</option>)}
             </select>
             <label htmlFor="guests">Number of guests</label>
-            <input type="number" placeholder="1" min="1" max="10" id="guests" onChange={handleGuestsChange}/>
+            <input type="number" min="1" max="10" id="guests" required aria-required="true" onChange={handleGuestsChange}/>
             <label htmlFor="occasion">Occasion</label>
-            <select id="occasion" onChange={handleOccasionChange}>
-                <option>Birthday</option>
-                <option>Anniversary</option>
+            <select id="occasion" required aria-required="true" onChange={handleOccasionChange}>
+                <option value="">Choose occasion</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
             </select>
-            <input type="submit" value="Make Your reservation"/>
+            <input type="submit" role="button" value="Make Your reservation" disabled={date && time && guests && occasion ? false : true}/>
         </form>
         </>
     )
