@@ -9,6 +9,7 @@ import './css/utils/text.css';
 import './css/utils/visibility.css';
 import './css/components/button.css';
 import './css/components/cards.css';
+import './css/components/form.css';
 import './css/components/image.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

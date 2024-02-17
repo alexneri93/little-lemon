@@ -53,6 +53,15 @@ a:hover{
 .rounded{
   border-radius: 50%;
 }
+.border-0{
+	border: none;
+}
 .w-75{
   width: 75%;
+}
+.w-50{
+	width: 50%;
+}
+.w-25{
+	width: 25%;
 }

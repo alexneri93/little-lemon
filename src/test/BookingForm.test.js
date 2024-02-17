@@ -51,7 +51,7 @@ test('Submission is disabled if there is missing data', () => {
     const dispatchTimes = jest.fn();
     const handleSubmit = jest.fn();
     render(<BookingForm availableTimes={["17:00", "18:00", "19:00"]} dispatchTimes={dispatchTimes} submitForm={handleSubmit}/>);
-    const submitButton = screen.getByRole("button");
+    const submitButton = screen.getByText(/Reserve/);
     fireEvent.click(submitButton);
     expect(handleSubmit).not.toHaveBeenCalled();
     expect(submitButton).toHaveAttribute("disabled");
@@ -69,7 +69,7 @@ test('Submission is possible if the data is correct', () => {
     fireEvent.change(guestsInput, {target: {value: "2"}});
     const occasionInput = screen.getByLabelText(/Occasion/);
     fireEvent.change(occasionInput, {target: {value: "birthday"}});
-    const submitButton = screen.getByRole("button");
+    const submitButton = screen.getByText(/Reserve/);
     fireEvent.click(submitButton);
     expect(handleSubmit).toHaveBeenCalled();
     expect(submitButton).not.toHaveAttribute("disabled");

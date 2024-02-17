@@ -24,6 +24,9 @@ align-items: flex-start;
 .flex-column{
 flex-direction: column;
 }
+.flex-column-reverse{
+    flex-direction: column-reverse;
+}
 
 .d-grid{
     display: grid;
@@ -40,6 +43,9 @@ flex-direction: column;
 
 .gap-small{
     gap: 8px;
+}
+.gap-medium{
+    gap: 16px;
 }
 .gap-big{
     gap: 30px;

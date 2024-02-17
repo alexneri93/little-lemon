@@ -5,11 +5,26 @@ font-weight: bold;
 text-decoration: none;
 border-radius: 10px;
 display: inline-block;
-}
-.btn:hover{
-opacity: 0.5;
+text-align: center;
+cursor: pointer;
 }
 .btn--primary{
 background-color: var(--yellow);
 color: var(--dark-gray);
+}
+.btn--primary:hover{
+    background-color: #ffd400;
+}
+.btn--secondary{
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+.btn--secondary:hover{
+    background-color: #eee;
+}
+.btn:disabled,
+.btn--disabled{
+    background-color: var(--light-gray);
+    opacity: 0.5;
+    pointer-events: none;
 }

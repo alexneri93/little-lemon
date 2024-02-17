@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 function Specials (){
 
     const dishes = [
@@ -11,7 +13,7 @@ function Specials (){
             <div className="container mb-5 mt-5">
                 <div className='d-flex justify-space-between align-items-center mb-5'>
                     <h2 className='fw-medium type-markazi fs-6'>Specials</h2>
-                    <a className="btn btn--primary" role="button" href="www.google.es">Online Menu</a>
+                    <Link to='/menu' className="btn btn--primary" role="button">Online Menu</Link>
                 </div>
                 <div className='d-flex justify-space-between align-items-center flex-column flex-lg-row gap-big'>
                     {dishes.map(dish => {

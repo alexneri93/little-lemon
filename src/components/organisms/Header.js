@@ -6,7 +6,7 @@ import Nav from '../molecules/Nav'
 
 function Header () {
     return(
-    <header className="header mt-4 mb-4">
+    <header className="header pt-4 pb-4">
         <div className="container d-flex align-items-center justify-space-between">
             <img src={logo} alt="Little Lemon"/>
             <label htmlFor="header__togglemenu"  className='header__openmenu'>

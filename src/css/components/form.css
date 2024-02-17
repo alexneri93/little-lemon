@@ -1,0 +1,140 @@
+.form{
+    max-width: 400px;
+    border-radius: 16px;
+    -webkit-box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+}
+.form__field{
+    height: 40px;
+    box-sizing: border-box;
+    border: 1px solid var(--silver-gray);
+    border-radius: 3px;
+    padding-left: 15px;
+}
+.form__field:valid + label:after{
+    content: "\2713";
+    color: white;
+    font-weight: bold;
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: green;
+    border-radius: 50%;
+    font-size: 10px;
+    vertical-align: bottom;
+    position: absolute;
+    right: -25px;
+    top: 35px;
+}
+#email:invalid ~ #validate-email{
+    background-color: var(--light-gray);
+    opacity: 0.5;
+    pointer-events: none;
+}
+.form__progress{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 32px;
+    position: relative;
+}
+.form__progress__step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 8px;
+    background: white;
+    position: relative;
+    opacity: 0.5;
+}
+.form__progress__step span{
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--dark-gray);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form__progress_line{
+    opacity: 0.5;
+}
+.form__progress_line::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: var(--dark-gray);
+    position: absolute;
+    bottom: 12px;
+}
+
+.form__step{
+    display: none;
+}
+#step1:checked ~ .form__step--1{
+    display: block;
+}
+#step2:checked ~ .form__step--2{
+    display: block;
+}
+#step3:checked ~ .form__step--3{
+    display: block;
+}
+#step4:checked ~ .form__step--4{
+    display: block;
+}
+
+#step1:checked ~ .form__progress .form__progress__step--1,
+#step2:checked ~ .form__progress .form__progress__step--1,
+#step2:checked ~ .form__progress .form__progress__step--2,
+#step2:checked ~ .form__progress .form__progress_line--1,
+#step3:checked ~ .form__progress .form__progress__step--1,
+#step3:checked ~ .form__progress .form__progress__step--2,
+#step3:checked ~ .form__progress .form__progress__step--3,
+#step3:checked ~ .form__progress .form__progress_line--1,
+#step3:checked ~ .form__progress .form__progress_line--2,
+#step4:checked ~ .form__progress .form__progress__step--1,
+#step4:checked ~ .form__progress .form__progress__step--2,
+#step4:checked ~ .form__progress .form__progress__step--3,
+#step4:checked ~ .form__progress .form__progress__step--4,
+#step4:checked ~ .form__progress .form__progress_line--1,
+#step4:checked ~ .form__progress .form__progress_line--2,
+#step4:checked ~ .form__progress .form__progress_line--3
+{
+    opacity: 1;
+}
+
+#step2:checked ~ .form__progress .form__progress__step--1 span,
+#step3:checked ~ .form__progress .form__progress__step--1 span,
+#step3:checked ~ .form__progress .form__progress__step--2 span,
+#step4:checked ~ .form__progress .form__progress__step--1 span,
+#step4:checked ~ .form__progress .form__progress__step--2 span,
+#step4:checked ~ .form__progress .form__progress__step--3 span{
+    background: green;
+    color: green;
+}
+#step2:checked ~ .form__progress .form__progress__step--1 span:after,
+#step3:checked ~ .form__progress .form__progress__step--1 span:after,
+#step3:checked ~ .form__progress .form__progress__step--2 span:after,
+#step4:checked ~ .form__progress .form__progress__step--1 span:after,
+#step4:checked ~ .form__progress .form__progress__step--2 span:after,
+#step4:checked ~ .form__progress .form__progress__step--3 span:after{
+    content: "\2713";
+    color: white;
+    position: absolute;
+    font-size: 11px;
+    font-weight: bold;
+}
+#step2:checked ~ .form__progress .form__progress_line--1:after,
+#step3:checked ~ .form__progress .form__progress_line--1:after,
+#step3:checked ~ .form__progress .form__progress_line--2:after,
+#step4:checked ~ .form__progress .form__progress_line--1:after,
+#step4:checked ~ .form__progress .form__progress_line--2:after,
+#step4:checked ~ .form__progress .form__progress_line--3:after{
+    background: green;
+}

@@ -20,6 +20,9 @@ color: var(--orange);
 .text-green{
 color: var(--green);
 }
+.text-red{
+    color: var(--red);
+}
 
 .fs-1{
 font-size: 14px;
